@@ -1,0 +1,12 @@
+{
+  "loginpage": {
+    "clicktologin": "点 击 登 录"
+  },
+  "globalnavigation": {
+    "item": {
+      "setting": "设 定",
+      "profile": "型 材",
+      "group": "团 体"
+    }
+  }
+}

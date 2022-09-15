@@ -1,0 +1,24 @@
+[
+  {
+    "key": "MailContactList",
+    "title": "Customers message",
+    "titleVN": "Liên hệ mail",
+    "iconName": "form",
+    "isShow": true,
+    "childs": [],
+    "route": "/mailcontact-list",
+    "type": "his",
+    "page": "MailContactList"
+  },
+  {
+    "key": "ServiceList",
+    "title": "Email subscribe",
+    "titleVN": "Tất cả người đăng ký",
+    "iconName": "form",
+    "isShow": true,
+    "childs": [],
+    "route": "/subscriber-list",
+    "type": "his",
+    "page": "SubscriberList"
+  }
+]

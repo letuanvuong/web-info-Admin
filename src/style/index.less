@@ -1,0 +1,177 @@
+@import '~@digihcs/util/lib/style/index.less';
+@import './functions.less';
+@import './variables.less';
+
+.@{prefix-cls}-switch-text {
+  position: absolute;
+  top: 0.0625rem;
+  width: 1.75rem;
+  margin: 0 0 0 0.125rem;
+  color: #32363a;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-align: center;
+}
+
+.@{prefix-cls}-switch-text-on {
+  left: -0.25rem;
+  color: #fff;
+}
+
+.@{prefix-cls}-switch-text-off {
+  left: 0.65rem;
+}
+
+.@{prefix-cls}-switch-label {
+  display: block;
+  width: 1.75rem;
+  height: 1.25rem;
+  padding: 0;
+  overflow: hidden;
+  line-height: inherit;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+html,
+body {
+  .scroll();
+
+  z-index: 1;
+  box-sizing: border-box;
+  margin: 0;
+  font: normal 13px;
+  // font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  // font-family: 'Open Sans', sans-serif;
+
+  >div#root {
+    z-index: 2;
+    height: 100vh;
+
+    >div.app-container {
+      height: 100%;
+
+      &::before {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        content: '';
+      }
+    }
+  }
+
+  .notification-container-top-right {
+    top: 25px;
+  }
+
+  &.innos-ui-desktop {
+    &.innos-ui-std-ext-large-desktop {
+      height: 100%;
+
+      #root,
+      body {
+        height: auto;
+      }
+    }
+  }
+
+  // avoid page break inside table row
+  thead,
+  tfoot {
+    display: table-row-group;
+  }
+
+  tr {
+    page-break-after: always;
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+}
+
+.innos-ui-tool-header {
+  border-bottom: 1px solid #FFD300 !important;
+}
+
+.innos-ui-footer {
+  display: flex !important;
+  justify-content: flex-end;
+  height: 31px;
+
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    content: '';
+  }
+
+  .innos-ui-button {
+    width: 90px;
+    margin-right: 5px;
+  }
+}
+
+
+
+#root {
+  background: #F0F4F5;
+}
+
+html.innos-ui-phone,
+html.innos-ui-tablet {
+  .innos-ui-select input {
+    -webkit-appearance: none;
+  }
+
+  .innos-ui-form-item-label {
+    height: auto !important;
+  }
+}
+
+html.innos-ui-desktop {
+  .innos-ui-his-split-container {
+    border-top: none !important;
+  }
+}
+
+// edit width sidebar grid
+.innos-ui-navigation-list-item-text{
+  overflow: hidden;
+  white-space: break-spaces;
+}
+.innos-ui-his-split-container-left-container {
+  width: 14.75rem !important;
+
+  &.innos-ui-his-split-container-left-container-is-collapse {
+    width: 2.25rem !important;
+    .innos-ui-navigation-list-his-wrapper{
+      overflow-y: auto !important;
+    }
+  }
+}
+.innos-ui-his-split-container-right-container {
+  width: calc((100% - 0.3125rem) - 14.75rem) !important;
+}
+
+.innos-ui-his-split-container-left-container-is-collapse~.innos-ui-his-split-container-right-container {
+  width: calc((100% - 0.3125rem) - 2.25rem) !important;
+}
+.innos-ui-navigation-list-item-icon{
+  width: 16px !important;
+  min-width: unset !important;
+  transform: translateY(-10px);
+}
+.innos-ui-navigation-list-item-wrap{
+  align-items: unset !important;
+  height: unset !important;
+}
+.innos-ui-navigation-list-his-wrapper{
+  overflow-y: unset !important;
+}

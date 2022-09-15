@@ -1,0 +1,100 @@
+@import '../../style/variables.less';
+
+.overview {
+  .updated-info {
+    width: calc(100% - 17px);
+    margin-bottom: 12px;
+    margin-left: 12px;
+    color: #32363a;
+    font-size: 14px;
+  }
+
+  .refresh {
+    span:first-child {
+      color: #0a6ed1;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .chart-container {
+    margin-top: 8px;
+    padding: 0 10px 30px 12px;
+    overflow-y: auto;
+
+    .chart-item {
+      margin: 12px;
+    }
+
+    .chart-content {
+      height: 280px;
+      margin: 5px;
+    }
+
+    .groupItem {
+      display: flex;
+      flex-wrap: wrap;
+
+      .groupVertical {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .overview .chart-container {
+    height: calc(100vh - 105px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .overview {
+    .chart-container {
+      .item-res-50 {
+        width: calc(50% - 2 * @margin-value);
+      }
+
+      .item-res-100 {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .overview {
+    .chart-container {
+      margin-top: 0;
+      padding: 0 0 30px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .overview {
+    .filterWrapper {
+      margin-top: -1px;
+    }
+
+    .chart-container {
+      height: unset;
+      padding-bottom: 20px;
+
+      .groupItem {
+        .chart-item {
+          width: 100%;
+        }
+
+        .groupVertical {
+          width: calc(100% - 2 * @margin-value);
+        }
+      }
+    }
+  }
+}

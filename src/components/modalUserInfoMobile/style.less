@@ -1,0 +1,69 @@
+.m-modal-user-info {
+  height: 90vh;
+
+  .innos-ui-modal-content {
+    height: inherit;
+
+    .innos-ui-modal-body {
+      max-height: none;
+
+      .innos-ui-icon-tab-bar {
+        .innos-ui-icon-tab-bar-content {
+          .form-change-password,
+          .form-change-profile {
+            display: flex;
+            flex-direction: column;
+            height: 341px;
+            padding-top: 15px;
+            .group-btn {
+              display: flex;
+              justify-content: space-around;
+              width: 83vw;
+              padding: 10px 0;
+
+              .wrapper-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+
+                .cancel-btn {
+                  .innos-ui-button-inner.innos-ui-button-text.innos-ui-button-fill {
+                    width: 95%;
+                    background-color: #ea5230;
+                    border-color: #ea5230;
+                  }
+                }
+
+                .innos-ui-button {
+                  width: 95%;
+                  height: inherit;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.innos-ui-desktop .m-modal-user-info {
+  .innos-ui-modal-content {
+    width: 500px;
+    margin: 0 auto;
+
+    .innos-ui-modal-body {
+      .innos-ui-icon-tab-bar {
+        .innos-ui-icon-tab-bar-content {
+          .form-change-password,
+          .form-change-profile {
+            .group-btn {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

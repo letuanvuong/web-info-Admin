@@ -1,0 +1,42 @@
+.build_image: &build_image
+  - >
+    docker build
+    --build-arg NPM_TOKEN=${NPM_TOKEN}
+    --build-arg APP_BASENAME_PATH='/web-admin'
+    --build-arg APP_VERSION=${APP_VERSION}
+    -t ${DOCKER_IMAGE}:${APP_VERSION} -t ${DOCKER_IMAGE}:latest .
+  - docker push ${DOCKER_IMAGE}:latest
+  - docker push ${DOCKER_IMAGE}:${APP_VERSION}
+  - curl -X GET -u ${DOCKER_REGISTRY_USER}:${DOCKER_REGISTRY_PASS} https://${DOCKER_REGISTRY_HOST}/v2/webinfo_admin_fe/tags/list
+
+.deploy_template: &deploy_script
+  - export gitURL="$(git remote get-url origin)"
+  - export gitURL=${gitURL::-4}
+  - export ChangeLogUrl="$gitURL/blob/${CI_COMMIT_REF_NAME}/CHANGELOG.md"
+  - echo ${ChangeLogUrl}
+  - npm i
+  - SERVICE=${SERVICE} STAGE=${STAGE} SITE=${DOMAIN}/${SERVICE} node ./node_modules/@digihcs/util/lib/scripts/his-bot.js
+before_script:
+  - export PATH=$PATH:$HOME/.nvm/versions/node/v11.11.0/bin/
+  - SERVICE='web-admin'
+  - export APP_VERSION=$(echo $CI_COMMIT_REF_NAME | cut -d '-' -f 2)
+  - export DOCKER_IMAGE="${DOCKER_REGISTRY_HOST}/webinfo_admin_fe"
+  - docker login -u ${DOCKER_REGISTRY_USER} -p ${DOCKER_REGISTRY_PASS} ${DOCKER_REGISTRY_HOST}
+stages:
+  - buildImage
+  - deployWebinfoAdmin
+buildImage:
+  stage: buildImage
+  only:
+    refs:
+      - /deploy-*/
+  script: *build_image
+deployWebinfoAdmin:
+  stage: deployWebinfoAdmin
+  only:
+    refs:
+      - /deploy-*/
+  variables:
+    STAGE: 'test'
+    DOMAIN: 'test.vhis.vn'
+  script: *deploy_script

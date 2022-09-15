@@ -1,0 +1,68 @@
+.innos-ui-ag-grid-pagination {
+  .innos-ui-toolbar-spacer.innos-ui-toolbar-spacer-flex
+    + .innos-ui-text.innos-ui-text-no-wrap {
+    display: none !important;
+
+    & + .innos-ui-select::before {
+      position: absolute;
+      top: 25%;
+      right: 100%;
+      width: 166px;
+      content: 'Number of rows to display:';
+    }
+  }
+}
+
+.innos-ui-his-split-container-left-container:not(.innos-ui-his-split-container-left-container-is-collapse) {
+  .innos-ui-his-split-container-collapse {
+    .innos-ui-his-split-container-collapse-text {
+      display: none;
+    }
+
+    .innos-ui-icon-close-command-field::after {
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 100px;
+      margin-left: 0.625rem;
+      content: 'Collapse menu';
+    }
+  }
+}
+
+.innos-ui-his-login-page-form {
+  div.innos-ui-form-item:nth-child(1) {
+    .innos-ui-form-item-label {
+      .innos-ui-label-text-wrapper {
+        display: none;
+      }
+      label.innos-ui-label-colon:nth-child(1)::before {
+        content: 'Username';
+      }
+    }
+  }
+  div.innos-ui-form-item:nth-child(2) {
+    .innos-ui-form-item-label {
+      .innos-ui-label-text-wrapper {
+        display: none;
+      }
+
+      label.innos-ui-label-colon:nth-child(1)::before {
+        content: 'Password';
+      }
+    }
+  }
+
+  .innos-ui-form-item-control {
+    .innos-ui-button {
+      .innos-ui-button-inner::before {
+        content: 'Login';
+      }
+      .innos-ui-button-inner {
+        .innos-ui-button-content {
+          display: none;
+        }
+      }
+    }
+  }
+}

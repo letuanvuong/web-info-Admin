@@ -1,0 +1,13 @@
+[
+  {
+    "key": "AdminAccount",
+    "title": "Admin accounts",
+    "titleVN": "Admin accounts",
+    "iconName": "form",
+    "isShow": true,
+    "childs": [],
+    "route": "/admin-account",
+    "type": "his",
+    "page": "SettingUser"
+  }
+]

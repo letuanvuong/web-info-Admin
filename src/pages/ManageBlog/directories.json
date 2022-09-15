@@ -1,0 +1,38 @@
+
+[
+  {
+    "key": "BlogList",
+    "title": "All blogs",
+    "titleVN": "Danh sách blog",
+    "iconName": "all",
+    "isShow": true,
+    "childs": [],
+    "route": "/blog-list",
+    "type": "his",
+    "page": "BlogList"
+  },
+  {
+    "key": "FormAddBlog",
+    "title": "Add Blog",
+    "titleVN": "Thêm blog",
+    "iconName": "form",
+    "isShow": false,
+    "childs": [],
+    "route": "/blog-create",
+    "type": "his",
+    "page": "FormAddBlog",
+    "GroupRoute": "/blog-list"
+  },
+  {
+    "key": "FormEditBlog",
+    "title": "Edit Blog",
+    "titleVN": "Cập nhật blog",
+    "iconName": "form",
+    "isShow": false,
+    "childs": [],
+    "route":  "/blog-detail",
+    "type": "his",
+    "page": "FormAddBlog",
+    "GroupRoute": "/blog-list"
+  }
+]

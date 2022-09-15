@@ -1,0 +1,37 @@
+[
+  {
+    "key": "ProductList",
+    "title": "All products",
+    "titleVN": "Tất cả sản phẩm",
+    "iconName": "all",
+    "isShow": true,
+    "childs": [],
+    "route": "/product-list",
+    "type": "his",
+    "page": "ProductList"
+  },
+  {
+    "key": "Create Product",
+    "title": "Create Product",
+    "titleVN": "Tạo Sản phẩm",
+    "iconName": "form",
+    "isShow": false,
+    "childs": [],
+    "route": "/product-create",
+    "type": "his",
+    "page": "FormProduct",
+    "GroupRoute": "/product-list"
+  },
+  {
+    "key": "Edit Product",
+    "title": "Edit Product",
+    "titleVN": "Chỉnh sửa Sản phẩm",
+    "iconName": "form",
+    "isShow": false,
+    "childs": [],
+    "route": "/product-detail",
+    "type": "his",
+    "page": "FormProduct",
+    "GroupRoute": "/product-list"
+  }
+]

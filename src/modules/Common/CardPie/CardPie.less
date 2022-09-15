@@ -1,0 +1,42 @@
+@import '../../../style//variables.less';
+
+@icon-width: 42px;
+@icon-height: 51px;
+
+.cardPie-wrapper {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: @box-shadow-smart;
+
+    .icon-wrapper {
+        width: @icon-width;
+        height: @icon-height;
+        border-radius: 5px 0 100% 0;
+
+        .icon {
+            padding-left: 7px;
+            color: white;
+            font-size: 20px;
+        }
+    }
+
+    .bold {
+        font-weight: 700;
+    }
+
+    .title {
+        position: absolute;
+        top: 12px;
+        left: 50px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .cardPie-wrapper {
+        width: 100%;
+    }
+}

@@ -1,0 +1,24 @@
+overwrite: true
+# cần biến GRAPHQL_URI_GEN trong .env.development
+schema: ${GRAPHQL_URI_GEN}
+documents: codegen/graphql-definition/webinfo-service/*.ts
+generates:
+  src/graphql-definition/webinfo-service.generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+      - add:
+          content: '/*'
+      - add:
+          content: ' * ------------------------------------------------------'
+      - add:
+          content: ' * THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)'
+      - add:
+          content: ' * -------------------------------------------------------'
+      - add:
+          content: ' */'
+      - add:
+          content: '/* eslint-disable unicorn/no-abusive-eslint-disable */'
+      - add:
+          content: '/* eslint-disable */'

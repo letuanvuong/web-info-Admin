@@ -1,0 +1,59 @@
+[
+  {
+    "key": "dashboard",
+    "title": "Homepage",
+    "titleVN": "Trang chủ",
+    "iconName": "form",
+    "isShow": true,
+    "childs": [],
+    "route": "/cms-home",
+    "type": "his",
+    "page": "CMSHome"
+  },
+  {
+    "key": "contactUs",
+    "title": "Contact Us",
+    "titleVN": "Liên hệ chúng tôi",
+    "iconName": "form",
+    "isShow": true,
+    "childs": [],
+    "route": "/cms-contact-us",
+    "type": "his",
+    "page": "CMSContactUs"
+  },
+  {
+    "key": "otherPages",
+    "title": "Other pages",
+    "titleVN": "Các trang khác",
+    "iconName": "form",
+    "isShow": true,
+    "childs": [],
+    "route": "/cms-other-pages",
+    "type": "his",
+    "page": "CMSOtherPages"
+  },
+  {
+    "key": "FormAddPage",
+    "title": "Add Page",
+    "titleVN": "Thêm Page",
+    "iconName": "form",
+    "isShow": false,
+    "childs": [],
+    "route": "/page-create",
+    "type": "his",
+    "page": "FormAddPage",
+    "GroupRoute": "/cms-other-pages"
+  },
+  {
+    "key": "FormEditPage",
+    "title": "Edit Page",
+    "titleVN": "Cập nhật Page",
+    "iconName": "form",
+    "isShow": false,
+    "childs": [],
+    "route": "/page-detail",
+    "type": "his",
+    "page": "FormAddPage",
+    "GroupRoute": "/cms-other-pages"
+  }
+]

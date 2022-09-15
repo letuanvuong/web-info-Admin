@@ -1,0 +1,86 @@
+@import '../../../style/variables.less';
+@import '../../../style/functions.less';
+
+.FilterCovid {  
+  background: #F0F4F5;
+  .title-filter {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+  }
+    .top {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 12px 17px 0 24px;
+  
+      .item {
+        .displayFlex();
+  
+        margin-right: 12px;
+        padding: 3px 0;
+  
+        button {
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .filterMonth {
+        width: 125px;
+      }
+
+      .filterYear {
+        width: 90px;
+      }
+
+      .filterNode {
+        width: 180px;
+      }
+    }
+}
+
+.filter-tong-quan {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .filter-tong-quan {
+    .top {
+      margin: 12px 10px 5px 11px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .FilterCovid {
+    .title-filter {
+      width: 100%
+    }
+
+    .top {
+      .filterMonth {
+        width: 124px;
+      }
+
+      .filterYear {
+        width: 77px;
+      }
+
+      .filterNode {
+        width: 143px;
+      }
+    }
+  }
+
+  .filter-tong-quan {
+    width: 100vw;
+
+    .top {
+      .item {
+        margin-right: 8px !important;
+      }
+    }
+  }
+}

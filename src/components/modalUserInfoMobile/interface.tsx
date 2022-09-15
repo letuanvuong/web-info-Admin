@@ -1,0 +1,4 @@
+export enum TAB_INFO_USER {
+  DOI_MAT_KHAU = 'DOI_MAT_KHAU',
+  THIET_LAP_HO_SO = 'THIET_LAP_HO_SO'
+}

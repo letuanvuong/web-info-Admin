@@ -1,0 +1,156 @@
+@color_1: #828282;
+@color_2: cornflowerblue;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../assets/images/background.png');
+  background-repeat: round;
+  background-size: contain;
+
+  .loginForm {
+    .innos-ui-his-login-page-brand {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  .logo {
+    width: 200px;
+    height: 50px;
+    background: url('../../assets/images/logo.png') no-repeat;
+    background-size: contain;
+  }
+  .ant-form {
+    width: 382px;
+    margin-top: 51px;
+    .ant-input {
+      height: 46px;
+      padding: 14px 20px;
+      background: rgba(255, 255, 255, 0.7);
+      border: none;
+      border-radius: 1px;
+      &::placeholder {
+        color: @color_1;
+        font-size: 13px;
+      }
+      &:focus {
+        border: none;
+      }
+    }
+    .ant-btn {
+      height: 46px;
+    }
+  }
+  .ant-form-item {
+    margin: 0;
+    padding: 0;
+    &:first-child {
+      margin-bottom: 19px;
+    }
+    &:nth-child(2) {
+      .ant-input-suffix {
+        i {
+          color: @color_1;
+        }
+      }
+    }
+    &:nth-child(3) {
+      margin-top: 15px;
+      margin-bottom: 50px;
+      .ant-form-item-children {
+        display: flex;
+        justify-content: space-between;
+        .ant-checkbox-wrapper {
+          .ant-checkbox-inner {
+            width: 13px;
+            height: 13px;
+            border-radius: 1px;
+          }
+          span {
+            color: @color_2;
+            font-size: 13px;
+          }
+        }
+        .forgot-btn {
+          color: @color_2;
+          font-size: 13px;
+          letter-spacing: 0.01em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .ant-form-explain {
+    display: none;
+  }
+}
+.error-wrapper {
+  display: flex;
+  align-items: center;
+  width: 382px;
+  height: 34px;
+  margin-top: 19px;
+  padding-left: 28px;
+  color: @color_2;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1px;
+  opacity: 0;
+  .anticon {
+    margin-right: 9px;
+    font-size: 12px;
+    line-height: 12px;
+    svg {
+      fill: rgba(255, 255, 255, 0.1);
+    }
+  }
+  .text {
+    font-size: 13px;
+  }
+}
+.Toastify__toast {
+  width: auto;
+  min-width: auto;
+  max-width: initial;
+  height: auto;
+  min-height: auto;
+  max-height: initial;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  .Toastify__toast-body {
+    padding: 0;
+    .innos-ui-medium-margin-bottom {
+      margin-bottom: 0.5em !important;
+    }
+    .innos-ui-message-strip-icon {
+      top: 45%;
+      transform: translateY(-50%);
+    }
+  }
+  button.Toastify__close-button {
+    display: none;
+  }
+}
+
+.innos-ui-his-login-page {
+  background-image: none !important;
+}
+.login{
+  .innos-ui-form-item {
+    .innos-ui-form-item-label {
+      width: 70px !important;
+    }
+
+    .innos-ui-form-item-control {
+      width: 200px !important;
+    }
+  }
+}
+

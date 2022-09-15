@@ -1,0 +1,120 @@
+@import '../../../style//variables.less';
+
+@icon-width: 42px;
+@icon-height: 51px;
+
+.card-wrapper {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: @box-shadow-smart;
+
+    .icon-wrapper {
+        width: @icon-width;
+        height: @icon-height;
+        border-radius: 5px 0 100% 0;
+
+        .icon {
+            padding-left: 7px;
+            color: white;
+            font-size: 20px;
+        }
+    }
+
+    .bold {
+        font-weight: 700;
+    }
+
+    .title {
+        position: absolute;
+        top: 12px;
+        left: 50px;
+        font-size: 14px;
+    }
+
+    .total {
+        position: absolute;
+        top: 32px;
+        left: 50px;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .statistic {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 10px 10px 10px;
+
+        .hideGrowth {
+            visibility: hidden;
+        }
+
+        .info-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 185px;
+            height: 76px;
+            .info {
+                display: flex;
+                align-items: center;
+
+                .quantity {
+                    min-width: 30px;
+                    max-width: 70px;
+                    color: #FA5A5A;
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+
+                .name {
+                    margin-left: 10px;
+                    font-size: 14px;
+                }
+            }
+
+            .info:last-child {
+                .quantity {
+                    color: #152AE5
+                }
+            }
+        }
+
+        .chart-overview {
+            height: 76px;
+            .chart-column {
+                width: 76px;
+                transform: translate(-32px, -37px) rotate(-90deg);
+                .bar {
+                    height: 7px;
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+
+    .line {
+        width: 20px;
+        height: 5px;
+        background: #E9730C;
+        border-radius: 5px
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card-wrapper  {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .card-wrapper  {
+        width: 100%;
+    }
+}

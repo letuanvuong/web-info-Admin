@@ -1,0 +1,4 @@
+{
+  "DEFAULT": "http://localhost:8080/graphqlwebinfo",
+  "AUTH": "http://localhost:9090/graphqlauth"
+}

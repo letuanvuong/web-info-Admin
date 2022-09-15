@@ -1,0 +1,62 @@
+.scroll() {
+  /* Custom Grid Scrollbar */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+    background: transparent !important;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    height: 3px;
+    background: #ccc;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+  }
+}
+
+.centerContent() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.displayFlex(@argument1: flex, @argument2: center, @argument3: center) {
+  display: @argument1;
+  align-items: @argument3;
+  justify-content: @argument2;
+}
+
+.box-shadow-input() {
+  border: 1px solid @dashboard-color !important;
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba(7, 143, 165, 0.1);
+}
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(7, 143, 165, 0.7), 0 0 0 0 rgba(7, 143, 165, 0.7);
+  }
+
+  40% {
+    box-shadow: 0 0 0 8px rgba(7, 143, 165, 0), 0 0 0 0 rgba(7, 143, 165, 0.7);
+  }
+
+  80% {
+    box-shadow: 0 0 0 8px rgba(7, 143, 165, 0), 0 0 0 5px rgba(7, 143, 165, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(7, 143, 165, 0), 0 0 0 5px rgba(7, 143, 165, 0);
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ],
+    [
+      "import",
+      { "libraryName": "@digihcs/grid2", "libraryDirectory": "lib", "style": true },
+      "@digihcs/grid2"
+    ],
+    [
+      "import",
+      { "libraryName": "@digihcs/chart", "libraryDirectory": "lib", "style": true },
+      "@digihcs/chart"
+    ],
+    [
+      "import",
+      { "libraryName": "@digihcs/innos-ui3", "libraryDirectory": "lib", "style": true },
+      "@digihcs/innos-ui3"
+    ]
+  ]
+}

@@ -1,0 +1,44 @@
+
+.container-styles {
+    width: 100%;
+    height: 20px;
+    background-color: rgba(250, 90, 90, 0.2);
+    border-radius: 50px;
+    .filler-styles {
+        align-items: center;
+        padding-right: 5px;
+        line-height: 100%;
+        text-align: right;
+        border-radius: 10px;
+
+        .label-styles {
+            height: 20px;
+            color: white;
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container-styles {
+        .filler-styles {
+            .label-styles {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container-styles {
+        height: 14px;
+        .filler-styles {
+            .label-styles {
+                height: 14px;
+                font-size: 11px;
+                line-height: 14px;
+            }
+        }
+    }
+}

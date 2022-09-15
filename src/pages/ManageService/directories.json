@@ -1,0 +1,63 @@
+[
+  
+  {
+    "key": "ServiceList",
+    "title": "All services",
+    "titleVN": "Tất cả dịch vụ",
+    "iconName": "all",
+    "isShow": true,
+    "childs": [],
+    "route": "/service-list",
+    "type": "his",
+    "page": "ServiceList"
+  },
+  {
+  "key": "FormAddService",
+  "title": "Add Service",
+  "titleVN": "Thêm dịch vụ",
+  "iconName": "form",
+  "isShow": false,
+  "childs": [],
+  "route": "/service-create",
+  "type": "his",
+  "page": "FormAddService",
+  "GroupRoute": "/service-list"
+  },
+  {
+    "key": "FormEditService",
+    "title": "Edit Service",
+    "titleVN": "Cập nhật service",
+    "iconName": "form",
+    "isShow": false,
+    "childs": [],
+    "route":  "/service-detail",
+    "type": "his",
+    "page": "FormAddService",
+    "GroupRoute": "/service-list"
+  },
+  {
+    "key": "AddProductsToService",
+    "title": "Add Products to Service",
+    "titleVN": "Thêm sản phẩm vào dịch vụ",
+    "iconName": "form",
+    "isShow": true,
+    "childs": [],
+    "route": "/add-products-to-service",
+    "type": "his",
+    "page": "AddProductsToService"
+  },
+  {
+    "key": "FormEditAddProductToServiceDetail",
+    "title": "Edit Add Product To Service",
+    "titleVN": "Cập nhật",
+    "iconName": "form",
+    "isShow": false,
+    "childs": [],
+    "route":  "/add-products-to-service-detail",
+    "type": "his",
+    "page": "FormAddProductsToService",
+    "GroupRoute": "/add-products-to-service"
+  }
+]
+
+  

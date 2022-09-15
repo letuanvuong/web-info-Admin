@@ -1,0 +1,13 @@
+[
+  {
+    "key": "general",
+    "title": "General setting",
+    "titleVN": "Cài đặt chung",
+    "iconName": "form",
+    "isShow": true,
+    "childs": [],
+    "route": "/general",
+    "type": "his",
+    "page": "Setting"
+  }
+]
